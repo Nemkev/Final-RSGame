@@ -45,7 +45,6 @@ export default class Vizualization {
     const k = Math.round(Math.random() * 2);
     this.monsterLayer.clear();
 
-    // Draw Left Hand
     const leftHand = new Konva.Image({
       x: 900,
       y: 200,
@@ -59,10 +58,8 @@ export default class Vizualization {
       width: orksArr.leftHand[i][2],
       height: orksArr.leftHand[i][3],
     });
-    // add the shape to the layer
     this.monsterLayer.add(leftHand);
 
-    // Draw Weapon
     const weapon = new Konva.Image({
       x: 760,
       y: 240,
@@ -76,10 +73,8 @@ export default class Vizualization {
       width: orksArr.weapon[i][2],
       height: orksArr.weapon[i][3],
     });
-    // add the shape to the layer
     this.monsterLayer.add(weapon);
 
-    // Draw LeftLeg
     const leftLeg = new Konva.Image({
       x: 980,
       y: 340,
@@ -93,10 +88,8 @@ export default class Vizualization {
       width: orksArr.leftLeg[i][2],
       height: orksArr.leftLeg[i][3],
     });
-    // add the shape to the layer
     this.monsterLayer.add(leftLeg);
 
-    // Draw RighttLeg
     const rightLeg = new Konva.Image({
       x: 1030,
       y: 340,
@@ -110,10 +103,8 @@ export default class Vizualization {
       width: orksArr.rightLeg[i][2],
       height: orksArr.rightLeg[i][3],
     });
-    // add the shape to the layer
     this.monsterLayer.add(rightLeg);
 
-    // Draw Body
     const body = new Konva.Image({
       x: 950,
       y: 160,
@@ -127,10 +118,8 @@ export default class Vizualization {
       width: orksArr.body[j][2],
       height: orksArr.body[j][3],
     });
-    // add the shape to the layer
     this.monsterLayer.add(body);
 
-    // Draw Head
     const head = new Konva.Image({
       x: 930,
       y: 80,
@@ -144,7 +133,6 @@ export default class Vizualization {
       width: orksArr.head[k][2],
       height: orksArr.head[k][3],
     });
-    // add the shape to the layer
     this.monsterLayer.add(head);
     const amplitude = 5;
     const period = 2000;
@@ -153,7 +141,6 @@ export default class Vizualization {
     }), this.monsterLayer);
 
     anim.start();
-    // Draw rightHand
     const rightHand = new Konva.Image({
       x: 1090,
       y: 210,
@@ -167,12 +154,8 @@ export default class Vizualization {
       width: orksArr.rightHand[i][2],
       height: orksArr.rightHand[i][3],
     });
-    // add the shape to the layer
     this.monsterLayer.add(rightHand);
-
-    // add the shape to the layer
     this.monsterLayer.add(rightHand);
-    // add the layer to the stage
     this.stage.add(this.monsterLayer);
     this.monsterLayer.draw();
   }
@@ -188,20 +171,17 @@ export default class Vizualization {
       frameRate: 7,
       frameIndex: 0,
     });
-    // add the shape to the layer
     this.knightLayer.add(this.knight);
 
-    // add the layer to the stage
     this.stage.add(this.knightLayer);
 
-    // start sprite animation
     this.knight.start();
   }
 
   setKnightAnimation(anim) {
     this.knight.setAnimation(anim);
   }
-  // Spell Fire Ball
+
   drawFireBall() {
     const animations = {
       fire: spellAnimations.fireBall,
@@ -215,13 +195,9 @@ export default class Vizualization {
       frameRate: 17,
       frameIndex: 0,
     });
-    // add the shape to the layer
     this.fireBallLayer.add(this.fireBall);
-
-    // add the layer to the stage
     this.stage.add(this.fireBallLayer);
 
-    // start sprite animation
     this.fireBall.start();
     this.fireBall.on('frameIndexChange', () => {
       if (this.fireBall.frameIndex() === 16) {
@@ -232,7 +208,7 @@ export default class Vizualization {
       }
     });
   }
-  // Hero heal
+
   drawHeal() {
     const animations = {
       heal: spellAnimations.heal,
@@ -246,13 +222,9 @@ export default class Vizualization {
       frameRate: 29,
       frameIndex: 0,
     });
-    // add the shape to the layer
     this.healLayer.add(this.heal);
-
-    // add the layer to the stage
     this.stage.add(this.healLayer);
 
-    // start sprite animation
     this.heal.start();
     this.heal.on('frameIndexChange', () => {
       if (this.heal.frameIndex() === 28) {
@@ -264,7 +236,6 @@ export default class Vizualization {
     });
   }
 
-  // Hero fire Attack
   drawFireAttack() {
     const animations = {
       attack: spellAnimations.fireAttack,
@@ -278,13 +249,8 @@ export default class Vizualization {
       frameRate: 29,
       frameIndex: 0,
     });
-    // add the shape to the layer
     this.fireAttackLayer.add(this.fireAttack);
-
-    // add the layer to the stage
     this.stage.add(this.fireAttackLayer);
-
-    // start sprite animation
     this.fireAttack.start();
     this.fireAttack.on('frameIndexChange', () => {
       if (this.fireAttack.frameIndex() === 28) {

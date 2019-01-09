@@ -49,7 +49,8 @@ const name = [
 ];
 
 function randomName(arr) {
-  return arr[Math.floor(Math.random() * arr.length)];
+  const size = arr.length;
+  return arr[Math.floor(Math.random() * size)];
 }
 
 export default function getMonsterName() {

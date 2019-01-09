@@ -39,7 +39,6 @@ export default class Controller {
   addAllButtonListeners() {
     const that = this;
 
-    // Task speeking
     $('#taskSpeaking').click(() => {
       this.currentTask = 'Speek';
       $('#spels').modal('hide');
@@ -50,7 +49,6 @@ export default class Controller {
       this.taskSpeaking.getRandomTask();
     });
 
-    // Task NumberSequence
     $('#taskNumbSeq').click(() => {
       this.currentTask = 'NumSeq';
       $('#spels').modal('hide');
@@ -61,7 +59,6 @@ export default class Controller {
       this.taskNumberSequence.getRandomTask();
     });
 
-    // Task WordSequence
     $('#taskWordSeq').click(() => {
       this.currentTask = 'WordSeq';
       $('#spels').modal('hide');
@@ -72,7 +69,6 @@ export default class Controller {
       this.taskWordSequence.getRandomTask();
     });
 
-    // Task Comparison
     $('#taskCompare').click(() => {
       this.currentTask = 'Compar';
       $('#spels').modal('hide');
@@ -94,7 +90,6 @@ export default class Controller {
       this.taskMath.getRandomTask();
     });
 
-    // Task Translate
     $('#taskTrans').click(() => {
       this.currentTask = 'Trans';
       $('#spels').modal('hide');
@@ -105,7 +100,6 @@ export default class Controller {
       this.taskTranslate.getRandomTask();
     });
 
-    // Task Listening
     $('#taskListen').click(() => {
       this.currentTask = 'Listen';
       $('#spels').modal('hide');
@@ -118,7 +112,6 @@ export default class Controller {
       $('#repeatWord').click(() => this.taskListening.repeat());
     });
 
-    // Task Mixrd word
     $('#taskMix').click(() => {
       this.currentTask = 'Mix';
       $('#spels').modal('hide');
@@ -130,10 +123,8 @@ export default class Controller {
       $('#mixedWord').sortable();
     });
 
-    // Add answer button listener
     $('#checkTaskAnsw').click(this.addAnswerListener.bind(that));
 
-    // Registration and rules
     $('#startGame').submit((e) => {
       e.preventDefault();
       const player = $('#nickName').val();
@@ -141,7 +132,7 @@ export default class Controller {
       $('.modal-registration').addClass('hide-modal');
     });
 
-    // Modal spell choose listenner
+    
     $('#spelChoice').click(() => {
       $('#spels').modal({
         keyboard: false,
@@ -150,7 +141,6 @@ export default class Controller {
     });
   }
 
-  // Call back for button Check Ansver
   addAnswerListener() {
     const that = this;
     $('#task').off('hidden.bs.modal');

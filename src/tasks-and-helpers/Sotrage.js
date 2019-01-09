@@ -4,7 +4,6 @@ export default class Sotrage {
     this.oldScore = [];
   }
 
-  // store to localStorage
   store(fullName, score) {
     this.oldScore = JSON.parse(localStorage.getItem('score')) || [];
     this.oldScore.push([fullName, score]);
@@ -13,9 +12,7 @@ export default class Sotrage {
     localStorage.setItem('score', result);
   }
 
-  // get score from localStorage
   get() {
-    // this.table = document.querySelector('.score-list');
     const scoreArr = JSON.parse(localStorage.getItem('score'));
     this.table.innerHTML = '';
     this.table.innerHTML = `<thead>

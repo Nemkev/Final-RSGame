@@ -48,7 +48,6 @@ export default class TaskSpeaking {
 
     recognition.onspeechend = () => {
       recognition.stop();
-      // $('#speechStart').prop( "disabled", false );
       $('#speechStart').text('Нажмите кнопку ответить');
     };
 

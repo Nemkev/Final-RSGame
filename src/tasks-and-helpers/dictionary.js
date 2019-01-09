@@ -48,7 +48,6 @@ const dictionary = {
       word: 'eye',
       trans: ['глаз', 'око'],
     },
-    //Add words
     {
       word: 'cat',
       trans: ['кот', 'котик'],
@@ -222,7 +221,8 @@ const dictionary = {
 
 function randomWord() {
   const arr = dictionary.words;
-  const word = arr[Math.floor(Math.random() * arr.length)];
+  const size = arr.length;
+  const word = arr[Math.floor(Math.random() * size)];
   return word;
 }
 export default randomWord;
