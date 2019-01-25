@@ -23,7 +23,7 @@ class App extends Component {
               раз? Сможет ли этот мир пережить ещё один тёмный век, или же навеки сгинет в пучине мрака?
               На этот вопрос может ответить лишь истенный герой, имя которому - {playerName}
             </p>
-            <h2>Злобные орки</h2>
+            <h2><a href="https://github.com/Nemkev/Final-RSGame">Злобные орки</a></h2>
             <div>
               <img src={ork_one} className="Gallery" alt="ork"/>
               <img src={ork_two} className="Gallery" alt="ork"/>
